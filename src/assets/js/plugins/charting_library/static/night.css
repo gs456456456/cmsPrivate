@@ -1,0 +1,95 @@
+
+
+
+.chart-page {
+    background: transparent!important;
+}
+
+.chart-page button {
+    background: #02242c !important;
+}
+
+.intervals-container {
+    background: #02242c !important;
+}
+
+::selection {
+    background: #02242c !important;
+}
+
+::-moz-selection {
+    background: #02242c !important
+}
+
+.chart-page .tv-side-toolbar .tools-group .button .main.text-as-icon {
+    color: #1ab394 !important;
+}
+
+.chart-page .tv-side-toolbar .tools-group .button svg {
+    fill: #1ab394 !important;
+    border-color: #19515f!important;
+}
+.chart-page svg{
+    fill: #1ab394 !important;
+    border-color: #19515f!important;
+}
+
+
+.header-chart-panel-content .apply-common-tooltip{
+    background: #02242c !important;
+    border:1px solid #19515f!important;
+}
+.tv-close-panel{
+    display: none!important;
+}
+.js-market-status{
+    background: none;
+    border: none!important;
+}
+.series-status-text{
+    border: none!important;
+}
+.quick .apply-common-tooltip{
+    color: #1ab394!important;
+}
+
+.chart-container{
+    border: 1px solid #19515f!important;
+}
+
+
+.header-group-undo-redo{
+    display: none
+}
+
+.loading-indicator{
+    background-color:transparent!important;
+}
+
+
+.tv-market-status--market .tv-market-status__dot{
+    background-color: #bc4d4e!important;
+}
+.tv-market-status--market{
+    color: #bc4d4e!important
+}
+body.chart-page, #loading-indicator {
+    background: transparent!important;
+}
+/* .tv-market-status{
+    color: #bc4d4e!important
+}
+.tv-market-status--post-market .tv-market-status__dot {
+    background-color: #bc4d4e!important
+} */
+
+/* .apply-common-tooltip i
+{
+    border:1px solid #19515f!important;
+    color: #16d3ad!important;
+} */
+/*图标hover*/
+/* .chart-page .tv-side-toolbar .group .button:hover svg, .chart-page .tv-side-toolbar .group .button.selected svg,
+.chart-page .header-chart-panel .group .button:hover svg,
+.chart-page .header-chart-panel .group .button.selected svg {
+  fill: #c7cce6; } */
