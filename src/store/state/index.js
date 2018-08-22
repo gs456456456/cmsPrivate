@@ -1,11 +1,14 @@
 import language from '@/language'
 export default {
 	user: {
-		wsToken: '',
-		wsSign: '',
+		userRouterBefore:'',
+		userInfoCache:{
+			account:"",
+			name:"",
+			divisional:"",
+			email:"",
+			phone:""
+		},
 		isLogin: false,
-		portfolios: [],
-		userData: {},
-		state: {}
 	}
 }

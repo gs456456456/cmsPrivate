@@ -4,9 +4,11 @@ import App from './App'
 import $ from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
+import "@/assets/css/plugins/font-awesome/css/font-awesome.min.css";
 
 import router from './router';
 import store from './store';
+import mixins from "./mixins";
 
 
 window.$ = $
@@ -20,25 +22,25 @@ Vue.component('vue-ladda', VueLadda)
 Vue.config.productionTip = false
 
 
-//判断是否登录跳转路由
-router.beforeEach(function (to, from, next) {
-  console.log(this)
-  // const nextRoute = ['/dw', '/fund/history', '/trade/history', '/usercenter'];
-  // const loginNextRoute = ['/login', '/register', '/forgotpassword', '/resetpassword'];
-  // //跳转至上述页面  
-  // if(!localStorage.getItem('islogin')){
-  //     // router.push({ path: "/" });
-  //     if (nextRoute.indexOf(to.path) >= 0) {
-  //       router.push({ path: '/login' })
-  //     }
-  // }
-  // else{
-  //   if (loginNextRoute.indexOf(to.path) >= 0) {
-  //     router.push({ path: "/" });
-  //   } 
-  // }
-  next();
-});
+//判断是否为已登录状态
+// router.beforeEach(function (to, from, next) {
+//   console.log(this)
+//   const nextRoute = ['/'];
+//   const loginNextRoute = ['/userinfo'];
+//   // //跳转至上述页面  
+//   // if(!localStorage.getItem('islogin')){
+//   //     // router.push({ path: "/" });
+//   //     if (nextRoute.indexOf(to.path) >= 0) {
+//   //       router.push({ path: '/login' })
+//   //     }
+//   // }
+//   // else{
+//   //   if (loginNextRoute.indexOf(to.path) >= 0) {
+//   //     router.push({ path: "/" });
+//   //   } 
+//   // }
+//   next();
+// });
 
 
 

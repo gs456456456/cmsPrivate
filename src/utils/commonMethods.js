@@ -1,5 +1,11 @@
 import {getCookie} from '@/common/cookie.js'
 
+//密码正则
+function passwordVerify(pass){
+    let tepReg = /(?!^(\d+|[a-zA-Z]+|[~!@#$%^&*?]+)$)^[\w~!@#$%\^&*?]{8,20}$/
+    return tepReg.test(pass)
+}
+
 //数组去重
 function distinctArr(parm){
     var arr = parm,
@@ -12,7 +18,7 @@ function distinctArr(parm){
         if(arr[i] === arr[j]){
         j = ++i;
         }
-        }
+    }
      result.push(arr[i]);
 }
 return result;
@@ -57,34 +63,8 @@ function tabFilter(dom) {
 
 }
 
-function formatKlineData(data){
-    let formatobj = {"success":true,"data":{"lines":[]}};
-    data.forEach((v,i,a)=>{
-        let close=Number(v[2]);
-        v[1] = Number(v[1]);
-        v[3] = Number(v[3]);
-        v[4] = Number(v[4]);
-        v[5] = Number(v[5]);
-
-        removeArr(v,v[2]);
-        removeArr(v,v[5]);
-        removeArr(v,v[5]);
-        v.splice(4,0,close)
-    })
-    formatobj["data"]["lines"] = data
-    return formatobj
-}
-
-//cn/us
-function langJudeFn(fn1,fn2){
-    if(getCookie("lang")=="en-US"){
-        fn1();
-    }else{
-        fn2();
-    }
-}
 
 module.exports={
-    clone,distinctArr,removeArr,formatKlineData,langJudeFn,tabFilter
+    passwordVerify
 }
 // export{ clone,distinctArr,removeArr,formatKlineData,langJudeFn,tabFilter }

@@ -1,13 +1,13 @@
 <template>
-  <keep-alive id="app">
-	  	<div class="nav">
-
-		</div>
+  <div id="app">
+	  	<!-- <div class="nav">
+			
+		</div> -->
     	<router-view></router-view>
-  </keep-alive>
+  </div>
 </template>
 <script>	
-import '@/assets/css/common.less'
+// import '@/assets/css/common.less'
 import '@/assets/css/nav.less'
 import { mapGetters, mapActions, mapMutations, mapState } from "vuex";
 export default {
@@ -39,16 +39,18 @@ name: 'App',
 		}
 	},
 	watch: {
-		//nav权限
-		// '$route' (to, from) {
-		// 	if (to.name === 'home') {
-		// 		// something
-		// 	} else if (to.name === 'detail') {
-		// 		// something
-		// 	}
-		// }
+		//监听是否已登录
+		'$route' (to, from) {
+			console.log(to.name)
+			if (to.name === 'Index') {
+				if(localStorage.getItem('islogin',true)){
+					this.$router.push('/userinfo')
+				}
+			}
+		}
 	},
 }
-
-
 </script>
+<style>
+
+</style>
